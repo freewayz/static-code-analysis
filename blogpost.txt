@@ -1,0 +1,68 @@
+While working on a project, we want to have some kind of tooling or process in
+place that we can use to see if our code follows certain standards; either our code
+has no common coding problems or calculates the complexity of the code.
+
+We need these tools to write better code. 
+Better code means it will be easier to
+maintain, and this lowers the cost of maintaining the code
+In a project team, we want to make sure that the code follows 
+the same standards defined by the project
+team.
+
+A company could define a set of standards that developers need to follow, as
+a condition for the project to be started.
+
+
+
+
+Using the Checkstyle plugin
+
+
+To add the
+Checkstyle analysis to our project, we simply have to apply the Checkstyle plugin:
+
+
+1. apply plugin 'checkstyle'
+
+
+We cannot execute these tasks yet, because we have to add a Checkstyle
+configuration file to our project. This file contains the rules that we want applied
+for our code. The plugin will look for a file checkstyle.xml in the directory
+config/checkstyle in our project
+
+
+- if our checkstyle fails during build then it generates a repors into the 
+
+- Gradle will also create an XML file with the violations in the build/
+reports/checkstyle directory.
+
+- But ignoreFailures = true [ To the rescue]
+
+
+- What about changing the config file to use a different standard
+	[ configFile = file('config/checkstyle/....._check.xml')
+
+- We can also reconfigure th checkstyleTest task for differnet options
+	checkstyleTest {.......}
+
+
+
+
+
+- Using the PMD plugin
+Another tool for analyzing the Java source code is PMD. It finds unused variables,
+empty catch blocks, unnecessary object creation, and so forth
+
+
+
+
+- Using Find Bug
+
+FindBugs is another library that we can use to analyze our source code
+
+
+
+Using the JDepend plugin
+To get quality metrics for our code base, we can use JDepend. JDepend traverses
+the generated class files in our project and generates design quality metrics.
+
