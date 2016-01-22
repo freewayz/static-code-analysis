@@ -1,4 +1,4 @@
-package com.flexisaf.brownbags.checkstyle;
+package com.flexisaf.brownbags.pmd;
 
 /**
  * Created by peter on 1/22/16.

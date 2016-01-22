@@ -1,4 +1,4 @@
-package com.flexisaf.brownbags.checkstyle;
+package com.flexisaf.brownbags.pmd;
 
 import java.util.List;
 

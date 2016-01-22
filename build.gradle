@@ -58,6 +58,5 @@ pmd {
             "braces",
             "design"
     ]
-
-    ruleSetFiles =  file('config/pmd/ourRuleSet.xml')
+    ruleSetFiles =  files('config/pmd/ourRuleSet.xml')
 }
