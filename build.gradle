@@ -11,6 +11,11 @@
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
 apply plugin: 'checkstyle'
+apply plugin: 'pmd'
+
+
+group = 'com.flexisaf.brownbag'
+version = '0.1.0'
 
 
 // In this section you declare where to find the dependencies of your project
@@ -34,16 +39,25 @@ dependencies {
 }
 
 
-sourceSets {
-    api
-}
-task execute(type: JavaExec){
-    main = mainClass
-    classpath = sourceSets.main.runtimeClasspath
-}
+
+//task execute(type: JavaExec){
+//    main = mainClass
+//    classpath = sourceSets.main.runtimeClasspath
+//}
 
 
 checkstyle {
     //let ignore checkstyle failure
     ignoreFailures = true
+}
+
+pmd {
+    ignoreFailures = true
+    ruleSets = [
+            "basic",
+            "braces",
+            "design"
+    ]
+
+    ruleSetFiles =  file('config/pmd/ourRuleSet.xml')
 }
