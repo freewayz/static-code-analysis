@@ -33,3 +33,17 @@ dependencies {
     testCompile "junit:junit:4.11"
 }
 
+
+sourceSets {
+    api
+}
+task execute(type: JavaExec){
+    main = mainClass
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+
+checkstyle {
+    //let ignore checkstyle failure
+    ignoreFailures = true
+}
