@@ -37,10 +37,10 @@ dependencies {
 sourceSets {
     api
 }
-task execute(type: JavaExec){
-    main = mainClass
-    classpath = sourceSets.main.runtimeClasspath
-}
+//task execute(type: JavaExec){
+//    main = mainClass
+//    classpath = sourceSets.main.runtimeClasspath
+//}
 
 
 checkstyle {
